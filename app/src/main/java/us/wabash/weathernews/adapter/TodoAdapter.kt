@@ -44,7 +44,7 @@ class TodoAdapter : RecyclerView.Adapter<TodoAdapter.ViewHolder>, TodoTouchHelpe
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         var todo = todoList.get(holder.adapterPosition)
 
-        holder.tvTextCity.text = todo.todoText
+        holder.tvTextCity.text = todo.inputCity
 
 
         holder.btnDelete.setOnClickListener {
@@ -64,12 +64,6 @@ class TodoAdapter : RecyclerView.Adapter<TodoAdapter.ViewHolder>, TodoTouchHelpe
         }
     }
 
-
-    fun updateTodo(todo: Todo) {
-        Thread {
-            AppDatabase.getInstance(context).todoDao().updateTodo(todo)
-        }.start()
-    }
 
     fun updateTodoOnPosition(todo: Todo, index: Int) {
         todoList.set(index, todo)
@@ -114,14 +108,11 @@ class TodoAdapter : RecyclerView.Adapter<TodoAdapter.ViewHolder>, TodoTouchHelpe
         notifyItemMoved(fromPosition, toPosition)
     }
 
-
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         val tvTextCity = itemView.etCityName
 
         val btnDelete = itemView.btnDelete
-
-        val btnDetails = itemView.btnDetails
         
     }
 

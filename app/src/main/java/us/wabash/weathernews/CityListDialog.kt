@@ -76,9 +76,7 @@ class TodoDialog : DialogFragment() {
         todoHandler.todoCreated(
             Todo(
                 null,
-                "",
-                etTodoText.text.toString(),
-                false
+                etTodoText.text.toString()
             )
         )
     }
