@@ -1,5 +1,3 @@
 # WeatherNews
 
-This is an android news app that gives the user the weather news update: current temperature, sunrise and sunset time, and more.
-This app downloads weather news update from https://openweathermap.org/. Moreover, this app has a small screen that
-shows the city on the Google Maps. 
+This is an android app that gives the user the weather news updates: current temperature, sunrise and sunset time, and the location of a city. I created this project when I took Mobile Software Development class that was taught by Dr. PÉTER EKLER. I used the APIs from "Openweathermap.org" and Google Maps. This application consists of two activites. Main activity shows list of cities which are added by the user. When a user clicks one of cities on the main activity, it will open another activity where a user can see weather news updates like current temperature. The main activity has a Recycler View and has add and delete buttons. I used Floating Action Button to create the add button. 
